@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Books | AHM! Book Store</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #F3E8D0;
+            color: #173737;
+            font-family: Arial, sans-serif;
+        }
+
+
+          .header {
+            background-color: #064F4F;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            color: #F3E8D0;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            color: #D9F0E8;
+            font-style: italic;
+        }
+
+
+           .navigation {
+            background-color: #008080;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        .navigation a:hover {
+            color: #F3E8D0;
+        }
+
+
+        
+
+        .page-title {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .page-title h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: #064F4F;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+            color: #66706D;
+        }
+
+
+            .category-title {
+            width: 90%;
+            margin: 40px auto 15px;
+            font-family: Georgia, serif;
+            font-size: 28px;
+            color: #064F4F;
+            border-left: 6px solid #008080;
+            padding-left: 12px;
+        }
+
+
+           .book-table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: #FFF8E8;
+        }
+
+        .book-table th {
+            background-color: #064F4F;
+            color: #F3E8D0;
+            padding: 15px;
+            border: 1px solid #064F4F;
+            font-family: Georgia, serif;
+            font-size: 17px;
+        }
+
+        .book-table td {
+            padding: 15px;
+            border: 1px solid #B7C8C4;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .book-table tr:hover {
+            background-color: #E8F3EF;
+        }
+
+
+        
+        .book-image {
+            width: 90px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+
+        
+        .price {
+            color: #064F4F;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+
+        
+        .view-button {
+            background-color: #008080;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .view-button:hover {
+            background-color: #064F4F;
+        }
+
+
+        
+        .footer {
+            margin-top: 50px;
+            background-color: #064F4F;
+            text-align: center;
+            padding: 30px;
+            color: #F3E8D0;
+        }
+
+        .footer-title {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="header">
+
+        <div class="logo">
+            AHM! BOOK STORE
+        </div>
+
+        <div class="tagline">
+            Where Every Book Opens a New World
+        </div>
+
+    </div>
+
+
+    
+
+    <div class="navigation">
+
+        <a href="index.html">HOME</a>
+
+        <a href="books.html">BOOKS</a>
+
+        <a href="categories.html">CATEGORIES</a>
+
+        <a href="about.html">ABOUT US</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+
+    
+    <div class="page-title">
+
+        <h1>OUR BOOK COLLECTION</h1>
+
+        <p>
+            Explore books for learning, imagination and personal growth.
+        </p>
+
+    </div>
+
+
+    
+
+    <h2 class="category-title">
+        Academic Books
+    </h2>
+
+
+    <table class="book-table">
+
+        <tr>
+
+            <th>Book</th>
+
+            <th>Book Title</th>
+
+            <th>Author</th>
+
+            <th>Category</th>
+
+            <th>Price</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book1.jpg"
+                     alt="Academic Book"
+                     class="book-image">
+            </td>
+
+            <td>
+                Introduction to Computer Science
+            </td>
+
+            <td>
+                John Smith
+            </td>
+
+            <td>
+                Computer Science
+            </td>
+
+            <td class="price">
+                ₹499
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book2.jpg"
+                     alt="Programming Book"
+                     class="book-image">
+            </td>
+
+            <td>
+                Programming Fundamentals
+            </td>
+
+            <td>
+                Robert Martin
+            </td>
+
+            <td>
+                Programming
+            </td>
+
+            <td class="price">
+                ₹599
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    
+
+    <h2 class="category-title">
+        Fiction & Novels
+    </h2>
+
+
+    <table class="book-table">
+
+        <tr>
+
+            <th>Book</th>
+
+            <th>Book Title</th>
+
+            <th>Author</th>
+
+            <th>Category</th>
+
+            <th>Price</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book3.jpg"
+                     alt="Fiction Book"
+                     class="book-image">
+            </td>
+
+            <td>
+                The Silent Journey
+            </td>
+
+            <td>
+                William James
+            </td>
+
+            <td>
+                Fiction
+            </td>
+
+            <td class="price">
+                ₹399
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book4.jpg"
+                     alt="Novel"
+                     class="book-image">
+            </td>
+
+            <td>
+                A New Beginning
+            </td>
+
+            <td>
+                Daniel Brown
+            </td>
+
+            <td>
+                Novel
+            </td>
+
+            <td class="price">
+                ₹449
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    
+    <h2 class="category-title">
+        Self Development
+    </h2>
+
+
+    <table class="book-table">
+
+        <tr>
+
+            <th>Book</th>
+
+            <th>Book Title</th>
+
+            <th>Author</th>
+
+            <th>Category</th>
+
+            <th>Price</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book5.jpg"
+                     alt="Self Development Book"
+                     class="book-image">
+            </td>
+
+            <td>
+                The Power of Habits
+            </td>
+
+            <td>
+                James Clear
+            </td>
+
+            <td>
+                Self Development
+            </td>
+
+            <td class="price">
+                ₹499
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                <img src="book6.jpg"
+                     alt="Personal Growth Book"
+                     class="book-image">
+            </td>
+
+            <td>
+                Think and Grow
+            </td>
+
+            <td>
+                David Miller
+            </td>
+
+            <td>
+                Personal Growth
+            </td>
+
+            <td class="price">
+                ₹349
+            </td>
+
+            <td>
+                <a href="#" class="view-button">
+                    View
+                </a>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    
+
+    <div class="footer">
+
+        <div class="footer-title">
+            AHM! BOOK STORE
+        </div>
+
+        <div class="footer-text">
+            Where Every Book Opens a New World
+        </div>
+
+        <br>
+
+        <div class="footer-text">
+            © 2026 AHM! Book Store | 1st Semester B.Sc. CS Project
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

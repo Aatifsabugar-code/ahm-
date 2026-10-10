@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | AHM! Book Store</title>
+
+    <style>
+
+        /* ---------- GENERAL ---------- */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F3E9D2;
+            color: #173737;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background-color: #073B37;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	  
+        }
+
+        .logo {
+            color: #F3E9D2;
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #F3E9D2;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            color: #073B37;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            color: #0B4F4A;
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #66706D;
+            font-size: 16px;
+        }
+
+
+        /* ---------- CONTACT SECTION ---------- */
+
+        .contact-section {
+            width: 86%;
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 38% 62%;
+            gap: 25px;
+        }
+
+
+        /* ---------- CONTACT INFORMATION ---------- */
+
+        .contact-info {
+            background-color: #073B37;
+            color: #F3E9D2;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-info h2 {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info hr {
+            border: none;
+            border-top: 1px solid #AFC8C3;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            margin-bottom: 28px;
+        }
+
+        .info-item h3 {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .info-item p {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+
+        /* ---------- FORM ---------- */
+
+        .contact-form {
+            background-color: #FFFDF7;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #D8CDB5;
+        }
+
+        .contact-form h2 {
+            font-family: Georgia, serif;
+            color: #073B37;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-form hr {
+            border: none;
+            border-top: 1px solid #D8CDB5;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #173737;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #B9B1A0;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0B4F4A;
+        }
+
+        .submit-btn {
+            background-color: #0B4F4A;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #073B37;
+        }
+
+
+        /* ---------- FAQ ---------- */
+
+        .faq {
+            width: 86%;
+            max-width: 900px;
+            margin: 70px auto;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #073B37;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        details {
+            background-color: #FFFDF7;
+            border: 1px solid #D8CDB5;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            padding: 16px 20px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #173737;
+        }
+
+        details p {
+            margin-top: 12px;
+            color: #66706D;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #073B37;
+            color: #F3E9D2;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 60px;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #F3E9D2;
+            text-decoration: none;
+        }
+
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .contact-section {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            AHM! Book Store
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>CONTACT US</h1>
+
+        <h2>Let's Talk Books</h2>
+
+        <p>
+            Have a question about a book, an order, or our store?
+            <br>
+            We would love to hear from you.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT AREA -->
+
+    <section class="contact-section">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <hr>
+
+            <p>
+                We are always happy to help our readers.
+                Contact us for questions, suggestions,
+                orders, or book recommendations.
+            </p>
+
+
+            <div class="info-item">
+
+                <h3>Email</h3>
+
+                <p>
+                    hello@ahmbookstore.com
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <h3>Phone</h3>
+
+                <p>
+                    +91 99132 43905
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <h3>Location</h3>
+
+                <p>
+                    Ahmedabad, Gujarat, India
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <h3>Opening Hours</h3>
+
+                <p>
+                    Monday - Saturday
+                    <br>
+                    10:00 AM - 6:00 PM
+                </p>
+
+            </div>
+
+
+            <p>
+                We usually respond within 24 hours.
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <h2>Send A Message</h2>
+
+            <hr>
+
+
+            <form>
+
+                <div class="form-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <select id="subject" name="subject">
+
+                        <option value="">
+                            Select a subject
+                        </option>
+
+                        <option>
+                            Book Inquiry
+                        </option>
+
+                        <option>
+                            Order Related
+                        </option>
+
+                        <option>
+                            Book Recommendation
+                        </option>
+
+                        <option>
+                            General Question
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    SEND MESSAGE
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="faq">
+
+        <h2>Frequently Asked Questions</h2>
+
+
+        <details>
+
+            <summary>
+                How can I track my order?
+            </summary>
+
+            <p>
+                Order tracking information will be provided
+                after your order has been shipped.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I request a specific book?
+            </summary>
+
+            <p>
+                Yes. Contact us with the book title and author,
+                and we will try our best to help you.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How can I contact customer support?
+            </summary>
+
+            <p>
+                You can contact us through email or the
+                contact form above.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>AHM! Book Store</h2>
+
+        <p>
+            Discover your next great read.
+        </p>
+
+        <p>
+            <a href="index.html">Home</a>
+            &nbsp; | &nbsp;
+            <a href="books.html">Books</a>
+            &nbsp; | &nbsp;
+            <a href="about.html">About Us</a>
+            &nbsp; | &nbsp;
+            <a href="contact.html">Contact</a>
+        </p>
+
+        <p>
+            © 2026 AHM! Book Store | 1st Semester B.Sc. CS Project
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,1464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AHM! Book Store | Home</title>
+
+    <style>
+
+        /* =========================================================
+           AHM! BOOK STORE
+           HOME PAGE - INTERNAL CSS
+           ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFF8E8;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        header {
+            background-color: #064F4F;
+            color: #F3E8D0;
+        }
+
+        .top-header {
+            padding: 28px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .brand p {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            font-style: italic;
+            color: #D9F0E8;
+        }
+
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
+
+        nav {
+            background-color: #008080;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li a {
+            display: block;
+            padding: 14px 22px;
+            color: #FFF8E8;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        nav li a:hover {
+            background-color: #064F4F;
+        }
+
+        /* =========================================================
+           HERO / LITERARY OPENING
+           ========================================================= */
+
+        .hero {
+            min-height: 610px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 8%;
+            background:
+                linear-gradient(rgba(6,79,79,0.88), rgba(6,79,79,0.88)),
+                url("images/bookstore.jpg");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: #FFF8E8;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #D9F0E8;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.1;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 span {
+            color: #F3E8D0;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+            color: #E5F2ED;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 13px 28px;
+            border: 1px solid #F3E8D0;
+            color: #F3E8D0;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .hero-button:hover {
+            background-color: #F3E8D0;
+            color: #064F4F;
+        }
+
+        /* Floating quote */
+        .floating-quote {
+            position: absolute;
+            right: 5%;
+            top: 80px;
+            width: 190px;
+            color: #D9F0E8;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+            font-style: italic;
+            transform: rotate(-7deg);
+            opacity: 0.9;
+        }
+
+        .floating-quote::before {
+            content: "“";
+            font-size: 55px;
+            display: block;
+            height: 30px;
+        }
+
+        /* =========================================================
+           INTRODUCTION
+           ========================================================= */
+
+        .intro {
+            padding: 80px 8%;
+            background-color: #F3E8D0;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #008080;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .intro h2,
+        .section-heading h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #064F4F;
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            max-width: 780px;
+            margin: auto;
+            color: #555555;
+            font-size: 16px;
+        }
+
+        /* =========================================================
+           DISCOVER SECTION
+           ========================================================= */
+
+        .discover {
+            padding: 90px 7%;
+            background-color: #FFF8E8;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: auto;
+            color: #666666;
+        }
+
+        .discover-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            align-items: start;
+        }
+
+        .discover-card {
+            border: 1px solid #C6D8D1;
+            background-color: #F3E8D0;
+            padding: 32px 28px;
+            min-height: 310px;
+        }
+
+        .discover-card:nth-child(2) {
+            background-color: #064F4F;
+            color: #F3E8D0;
+            transform: translateY(-22px);
+        }
+
+        .discover-card:nth-child(3) {
+            background-color: #D9F0E8;
+        }
+
+        .card-number {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #008080;
+            margin-bottom: 18px;
+        }
+
+        .discover-card:nth-child(2) .card-number {
+            color: #D9F0E8;
+        }
+
+        .discover-card h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .discover-card > p {
+            font-size: 14px;
+            margin-bottom: 25px;
+            color: #555555;
+        }
+
+        .discover-card:nth-child(2) > p {
+            color: #D9F0E8;
+        }
+
+        /* =========================================================
+           DROPDOWNS
+           ========================================================= */
+
+        details {
+            border-top: 1px solid rgba(0,0,0,0.15);
+            padding: 12px 0;
+        }
+
+        details:last-child {
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+        }
+
+        summary {
+            cursor: pointer;
+            list-style: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: #064F4F;
+        }
+
+        summary::after {
+            content: "+";
+            float: right;
+            font-size: 18px;
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        .discover-card:nth-child(2) summary {
+            color: #F3E8D0;
+        }
+
+        details p {
+            font-size: 13px;
+            color: #666666;
+            padding-top: 8px;
+        }
+
+        .discover-card:nth-child(2) details p {
+            color: #D9F0E8;
+        }
+
+        /* =========================================================
+           CATEGORIES
+           ========================================================= */
+
+        .categories {
+            padding: 100px 7%;
+            background-color: #064F4F;
+            color: #F3E8D0;
+        }
+
+        .categories .section-heading h2 {
+            color: #F3E8D0;
+        }
+
+        .categories .section-label {
+            color: #D9F0E8;
+        }
+
+        .categories .section-heading p {
+            color: #D9F0E8;
+        }
+
+        .category-grid {
+            max-width: 1100px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px 30px;
+            justify-items: center;
+        }
+
+        .category {
+            width: 185px;
+            height: 185px;
+            border: 1px solid #D9F0E8;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #F3E8D0;
+            text-decoration: none;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .category:nth-child(even) {
+            transform: translateY(30px);
+        }
+
+        .category:hover {
+            background-color: #F3E8D0;
+            color: #064F4F;
+            transform: scale(1.04);
+        }
+
+        .category strong {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .category small {
+            margin-top: 7px;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        /* =========================================================
+           AHM! PICKS
+           ========================================================= */
+
+        .picks {
+            padding: 100px 7%;
+            background-color: #F3E8D0;
+        }
+
+        .book-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .book-card {
+            background-color: #FFF8E8;
+            border: 1px solid #D6D0C1;
+            overflow: hidden;
+        }
+
+        .book-image {
+            height: 240px;
+            background-color: #D9F0E8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .book-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-placeholder {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #064F4F;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .book-info {
+            padding: 22px;
+        }
+
+        .book-info span {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #008080;
+            text-transform: uppercase;
+        }
+
+        .book-info h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #064F4F;
+            font-size: 21px;
+            font-weight: normal;
+            margin: 8px 0;
+        }
+
+        .book-info p {
+            font-size: 13px;
+            color: #666666;
+        }
+
+        /* =========================================================
+           QUOTE SECTION
+           ========================================================= */
+
+        .quote-section {
+            min-height: 500px;
+            position: relative;
+            overflow: hidden;
+            background-color: #FFF8E8;
+            padding: 90px 8%;
+        }
+
+        .main-quote {
+            max-width: 700px;
+            margin: 90px auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-quote p {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(30px, 5vw, 55px);
+            line-height: 1.15;
+            color: #064F4F;
+            font-style: italic;
+        }
+
+        .main-quote span {
+            display: block;
+            margin-top: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #008080;
+            font-style: normal;
+        }
+
+        .abstract-quote {
+            position: absolute;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            color: #008080;
+            font-size: 18px;
+        }
+
+        .quote-one {
+            left: 7%;
+            top: 75px;
+            transform: rotate(-8deg);
+        }
+
+        .quote-two {
+            right: 8%;
+            top: 110px;
+            transform: rotate(7deg);
+        }
+
+        .quote-three {
+            left: 12%;
+            bottom: 70px;
+            transform: rotate(5deg);
+        }
+
+        .quote-four {
+            right: 10%;
+            bottom: 80px;
+            transform: rotate(-6deg);
+            text-align: right;
+        }
+
+        /* =========================================================
+           RECENTLY RELEASED
+           ========================================================= */
+
+        .recent {
+            padding: 100px 7%;
+            background-color: #D9F0E8;
+        }
+
+        .recent-layout {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .recent-intro h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #064F4F;
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .recent-intro p {
+            color: #555555;
+            font-size: 15px;
+        }
+
+        .recent-list {
+            border-top: 1px solid #9ABDB3;
+        }
+
+        .recent-item {
+            padding: 22px 5px;
+            border-bottom: 1px solid #9ABDB3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .recent-item h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #064F4F;
+            font-weight: normal;
+            font-size: 21px;
+        }
+
+        .recent-item p {
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .recent-number {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #008080;
+            font-size: 24px;
+        }
+
+        /* =========================================================
+           FINAL INVITATION
+           ========================================================= */
+
+        .final-section {
+            background-color: #064F4F;
+            color: #F3E8D0;
+            text-align: center;
+            padding: 100px 8%;
+        }
+
+        .final-section p:first-child {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #D9F0E8;
+            margin-bottom: 18px;
+        }
+
+        .final-section h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .final-section .button {
+            display: inline-block;
+            border: 1px solid #F3E8D0;
+            padding: 13px 28px;
+            color: #F3E8D0;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .final-section .button:hover {
+            background-color: #F3E8D0;
+            color: #064F4F;
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background-color: #003F3F;
+            color: #D9F0E8;
+            padding: 55px 7% 25px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+            padding-bottom: 35px;
+        }
+
+        .footer-brand h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #F3E8D0;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            max-width: 320px;
+        }
+
+        footer h3 {
+            color: #F3E8D0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 7px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #D9F0E8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #F3E8D0;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           RESPONSIVE DESIGN
+           ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .top-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .discover-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+
+            .discover-card:nth-child(2) {
+                transform: none;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .recent-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .floating-quote {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .brand h1 {
+                font-size: 27px;
+            }
+
+            nav li a {
+                padding: 11px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 60px 6%;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .intro,
+            .discover,
+            .categories,
+            .picks,
+            .quote-section,
+            .recent,
+            .final-section {
+                padding: 70px 6%;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .category:nth-child(even) {
+                transform: none;
+            }
+
+            .book-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-one,
+            .quote-two,
+            .quote-three,
+            .quote-four {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header>
+
+        <div class="top-header">
+
+            <div class="brand">
+                <h1>AHM! BOOK STORE</h1>
+                <p>Where Every Book Opens a New World</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="books.html">BOOKS</a></li>
+                <li><a href="categories.html">CATEGORIES</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO / MAIN INTRODUCTION
+         ========================================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="floating-quote">
+                Every page is a beginning.
+            </div>
+
+            <div class="hero-content">
+
+                <p class="hero-small">WELCOME TO AHM! BOOK STORE</p>
+
+                <h2>
+                    A book does not simply tell a story.
+                    <span>It gives you somewhere new to go.</span>
+                </h2>
+
+                <p>
+                    Explore books by discovery, preference and access.
+                    Find something familiar, something unexpected,
+                    or simply something worth reading.
+                </p>
+
+                <a href="books.html" class="hero-button">
+                    EXPLORE BOOKS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRODUCTION
+             ===================================================== -->
+
+        <section class="intro">
+
+            <p class="section-label">THE IDEA</p>
+
+            <h2>A Place for Every Kind of Reader</h2>
+
+            <p>
+                AHM! Book Store brings books together in a simple,
+                organised and welcoming space. Whether you are looking
+                for academic knowledge, technology, fiction, science,
+                self-development or children's books, begin your search
+                from the way you want to discover your next book.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             DISCOVER YOUR NEXT READ
+             ===================================================== -->
+
+        <section class="discover">
+
+            <div class="section-heading">
+
+                <p class="section-label">DISCOVER</p>
+
+                <h2>Find Your Next Read</h2>
+
+                <p>
+                    Explore the collection from three different perspectives:
+                    what is new, what readers enjoy, and how you want to read.
+                </p>
+
+            </div>
+
+
+            <div class="discover-grid">
+
+
+                <!-- RELEASE -->
+
+                <div class="discover-card">
+
+                    <p class="card-number">01 / RELEASE</p>
+
+                    <h3>What's New?</h3>
+
+                    <p>
+                        Explore books according to when they entered
+                        the world of reading.
+                    </p>
+
+                    <details>
+                        <summary>New Releases</summary>
+                        <p>
+                            Discover recently released books and
+                            explore something fresh.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Upcoming</summary>
+                        <p>
+                            Keep an eye on books that are yet to arrive.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Earlier Releases</summary>
+                        <p>
+                            Revisit books that have already made
+                            their place on the shelves.
+                        </p>
+                    </details>
+
+                </div>
+
+
+                <!-- READER'S CHOICE -->
+
+                <div class="discover-card">
+
+                    <p class="card-number">02 / READER'S CHOICE</p>
+
+                    <h3>What Do Readers Love?</h3>
+
+                    <p>
+                        Browse according to popularity, appreciation
+                        and lasting literary value.
+                    </p>
+
+                    <details>
+                        <summary>Most Liked</summary>
+                        <p>
+                            Explore books that receive strong appreciation
+                            from readers.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Trending</summary>
+                        <p>
+                            See books that are attracting attention
+                            and conversation.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Classics</summary>
+                        <p>
+                            Discover works that continue to remain
+                            meaningful across generations.
+                        </p>
+                    </details>
+
+                </div>
+
+
+                <!-- ACCESS -->
+
+                <div class="discover-card">
+
+                    <p class="card-number">03 / ACCESS</p>
+
+                    <h3>How Do You Want to Read?</h3>
+
+                    <p>
+                        Discover books according to the way
+                        you prefer to access them.
+                    </p>
+
+                    <details>
+                        <summary>Free to Read</summary>
+                        <p>
+                            Explore books and reading material available
+                            without a purchase.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Premium</summary>
+                        <p>
+                            Browse books available as premium selections.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Physical Only</summary>
+                        <p>
+                            Find books intended for readers who prefer
+                            a physical copy.
+                        </p>
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATEGORIES
+             ===================================================== -->
+
+        <section class="categories">
+
+            <div class="section-heading">
+
+                <p class="section-label">EXPLORE</p>
+
+                <h2>Explore by Category</h2>
+
+                <p>
+                    Start with a subject that interests you
+                    and let your next book follow.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="categories.html" class="category">
+                    <strong>Academic</strong>
+                    <small>LEARN &amp; STUDY</small>
+                </a>
+
+                <a href="categories.html" class="category">
+                    <strong>Technology</strong>
+                    <small>IDEAS &amp; INNOVATION</small>
+                </a>
+
+                <a href="categories.html" class="category">
+                    <strong>Fiction</strong>
+                    <small>STORIES &amp; NOVELS</small>
+                </a>
+
+                <a href="categories.html" class="category">
+                    <strong>Self Development</strong>
+                    <small>GROW &amp; IMPROVE</small>
+                </a>
+
+                <a href="categories.html" class="category">
+                    <strong>Science</strong>
+                    <small>DISCOVER &amp; UNDERSTAND</small>
+                </a>
+
+                <a href="categories.html" class="category">
+                    <strong>Children's Books</strong>
+                    <small>IMAGINE &amp; EXPLORE</small>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AHM! PICKS
+             ===================================================== -->
+
+        <section class="picks">
+
+            <div class="section-heading">
+
+                <p class="section-label">CURATED</p>
+
+                <h2>AHM! Picks</h2>
+
+                <p>
+                    A small selection to begin exploring.
+                    Replace these placeholders with books from your
+                    actual collection.
+                </p>
+
+            </div>
+
+
+            <div class="book-grid">
+
+
+                <!-- BOOK 1 -->
+
+                <article class="book-card">
+
+                    <div class="book-image">
+
+                        <!-- Replace this placeholder with your actual book image -->
+
+                        <div class="book-placeholder">
+                            BOOK<br>
+                            COVER
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span>ACADEMIC</span>
+
+                        <h3>Featured Book</h3>
+
+                        <p>
+                            Add the actual title and author
+                            from your book collection here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BOOK 2 -->
+
+                <article class="book-card">
+
+                    <div class="book-image">
+
+                        <div class="book-placeholder">
+                            BOOK<br>
+                            COVER
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span>TECHNOLOGY</span>
+
+                        <h3>Featured Book</h3>
+
+                        <p>
+                            Add the actual title and author
+                            from your book collection here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BOOK 3 -->
+
+                <article class="book-card">
+
+                    <div class="book-image">
+
+                        <div class="book-placeholder">
+                            BOOK<br>
+                            COVER
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span>FICTION</span>
+
+                        <h3>Featured Book</h3>
+
+                        <p>
+                            Add the actual title and author
+                            from your book collection here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BOOK 4 -->
+
+                <article class="book-card">
+
+                    <div class="book-image">
+
+                        <div class="book-placeholder">
+                            BOOK<br>
+                            COVER
+                        </div>
+
+                    </div>
+
+                    <div class="book-info">
+
+                        <span>SCIENCE</span>
+
+                        <h3>Featured Book</h3>
+
+                        <p>
+                            Add the actual title and author
+                            from your book collection here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABSTRACT QUOTES
+             ===================================================== -->
+
+        <section class="quote-section">
+
+            <p class="abstract-quote quote-one">
+                Some stories stay with us.
+            </p>
+
+            <p class="abstract-quote quote-two">
+                Read something unexpected.
+            </p>
+
+            <p class="abstract-quote quote-three">
+                A quiet shelf can hold a loud idea.
+            </p>
+
+            <p class="abstract-quote quote-four">
+                Turn the page.<br>
+                See where it leads.
+            </p>
+
+
+            <div class="main-quote">
+
+                <p>
+                    "There is always another story
+                    waiting between the pages."
+                </p>
+
+                <span>AHM! BOOK STORE</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RECENTLY RELEASED
+             ===================================================== -->
+
+        <section class="recent">
+
+            <div class="recent-layout">
+
+                <div class="recent-intro">
+
+                    <p class="section-label">THE SHELF</p>
+
+                    <h2>Recently Released</h2>
+
+                    <p>
+                        Keep an eye on the newest additions to
+                        the collection and discover what has
+                        recently found its place on the shelf.
+                    </p>
+
+                </div>
+
+
+                <div class="recent-list">
+
+                    <div class="recent-item">
+
+                        <div>
+                            <h3>New Addition</h3>
+                            <p>Add an actual recently released book here.</p>
+                        </div>
+
+                        <span class="recent-number">01</span>
+
+                    </div>
+
+
+                    <div class="recent-item">
+
+                        <div>
+                            <h3>New Addition</h3>
+                            <p>Add an actual recently released book here.</p>
+                        </div>
+
+                        <span class="recent-number">02</span>
+
+                    </div>
+
+
+                    <div class="recent-item">
+
+                        <div>
+                            <h3>New Addition</h3>
+                            <p>Add an actual recently released book here.</p>
+                        </div>
+
+                        <span class="recent-number">03</span>
+
+                    </div>
+
+
+                    <div class="recent-item">
+
+                        <div>
+                            <h3>New Addition</h3>
+                            <p>Add an actual recently released book here.</p>
+                        </div>
+
+                        <span class="recent-number">04</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL INVITATION
+             ===================================================== -->
+
+        <section class="final-section">
+
+            <p>YOUR NEXT READ IS WAITING</p>
+
+            <h2>
+                Start with a subject.<br>
+                Follow a story.<br>
+                Find a book.
+            </h2>
+
+            <a href="books.html" class="button">
+                VIEW ALL BOOKS
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h2>AHM! BOOK STORE</h2>
+
+                <p>
+                    Where Every Book Opens a New World.
+                    Explore books, discover categories and
+                    find your next reading experience.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Discover</h3>
+
+                <ul>
+                    <li>New Releases</li>
+                    <li>Most Liked</li>
+                    <li>Classics</li>
+                    <li>Premium</li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 AHM! Book Store. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

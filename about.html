@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us - AHM! Book Store</title>
+
+    <style>
+
+        /* ---------- BASIC PAGE ---------- */
+
+        body {
+            margin: 0;
+            background-color: #F3E8D0;
+            color:  #173737;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        .header {
+            background-color: #064F4F;
+            color: beige;
+            text-align:center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: 42px;
+        }
+
+        .header p {
+            margin: 8px 0 0;
+            color: #F3E8D0;
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        .navbar {
+            background-color: #0B7070;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 18px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            color: #F3E8D0;
+        }
+
+
+        /* ---------- MARQUEE ---------- */
+
+        .marquee {
+            padding: 18px;
+            text-align: center;
+            color: #064F4F;
+            font-family: Georgia, serif;
+            font-size: 20px;
+        }
+
+
+        /* ---------- COMMON SECTION ---------- */
+
+        .section {
+            width: 88%;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #064F4F;
+            font-family: Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+
+        /* ---------- ABOUT SECTION ---------- */
+
+        .about-box {
+            background-color: #FFF8E8;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 30px;
+            border: 1px solid #D6C5A5;
+            border-radius: 12px;
+        }
+
+        .about-image {
+            width: 40%;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            width: 60%;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .about-text h2 {
+            color: #064F4F;
+            font-family: Georgia, serif;
+            font-size: 30px;
+        }
+
+
+        /* ---------- OUR STORY ---------- */
+
+        .story-box {
+            background-color: #E5F0EB;
+            padding: 35px;
+            border-left: 6px solid #064F4F;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .story-box .quote {
+            color: #0B7070;
+            font-family: Georgia, serif;
+            font-size: 23px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+
+        /* ---------- WHAT WE OFFER ---------- */
+
+        .offer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .offer-card {
+            background-color: #FFF8E8;
+            width: 28%;
+            min-width: 220px;
+            padding: 25px;
+            border: 1px solid #D6C5A5;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .offer-card:hover {
+            border-color: #064F4F;
+        }
+
+        .offer-card h3 {
+            color: #064F4F;
+            font-family: Georgia, serif;
+            margin-top: 0;
+        }
+
+        .offer-card p {
+            line-height: 1.5;
+        }
+
+
+        /* ---------- MISSION ---------- */
+
+        .mission {
+            background-color: #DDEDE8;
+            text-align: center;
+            padding: 45px 25px;
+            border-radius: 12px;
+        }
+
+        .mission .mission-quote {
+            color: #0B7070;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+
+        /* ---------- WHY CHOOSE US ---------- */
+
+        .why-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .why-card {
+            background-color: #FFF8E8;
+            width: 30%;
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #D6C5A5;
+            border-radius: 10px;
+        }
+
+        .why-card h3 {
+            color: #0B7070;
+            font-family: Georgia, serif;
+            font-size: 22px;
+        }
+
+
+        /* ---------- QUOTE ---------- */
+
+        .main-quote {
+            background-color: #064F4F;
+            color: #F3E8D0;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .main-quote h2 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+        }
+
+        .main-quote p {
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-box {
+            background-color: #FFF8E8;
+            padding: 30px;
+            border: 1px solid #D6C5A5;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-box p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .contact-box strong {
+            color: #064F4F;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        .footer {
+            background-color: #003F3F;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer h2 {
+            font-family: Georgia, serif;
+            margin-top: 0;
+        }
+
+        .footer a {
+            color: #F3E8D0;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <h1>AHM! BOOK STORE</h1>
+        <p>Where Every Book Opens a New World</p>
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="books.html">BOOKS</a>
+        <a href="categories.html">CATEGORIES</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+
+    <!-- MARQUEE -->
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">
+            Welcome to AHM! Book Store • Discover Your Next Favourite Book •
+            Read • Learn • Explore • Imagine
+        </marquee>
+    </div>
+
+
+    <!-- ABOUT US -->
+
+    <div class="section">
+
+        <div class="about-box">
+
+            <div class="about-image">
+                <img src="bookstore.jpg"
+                     alt="AHM Book Store">
+            </div>
+
+            <div class="about-text">
+
+                <h2>ABOUT AHM! BOOK STORE</h2>
+
+                <p>
+                    Welcome to <strong>AHM! Book Store</strong> —
+                    a place created for people who love
+                    <strong>books, knowledge and imagination.</strong>
+                </p>
+
+                <p>
+                    Our goal is simple: to make great books
+                    easy to discover and enjoyable to read.
+                </p>
+
+                <p>
+                    Whether you are a student looking for
+                    educational material, a reader searching
+                    for a new story, or someone looking for
+                    the perfect gift, <strong>AHM! Book Store</strong>
+                    has something for you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OUR STORY -->
+
+    <div class="section">
+
+        <h2 class="section-title">OUR STORY</h2>
+
+        <div class="story-box">
+
+            <p>
+                AHM! Book Store started with one simple idea:
+            </p>
+
+            <p class="quote">
+                "Make reading accessible, enjoyable and meaningful."
+            </p>
+
+            <p>
+                We believe that a book is more than just pages.
+                A book can teach us something, take us to another
+                world, inspire us and change the way we think.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHAT WE OFFER -->
+
+    <div class="section">
+
+        <h2 class="section-title">WHAT WE OFFER</h2>
+
+        <div class="offer-container">
+
+            <div class="offer-card">
+                <h3>Academic Books</h3>
+                <p>
+                    School, college and reference books.
+                </p>
+            </div>
+
+            <div class="offer-card">
+                <h3>Technology</h3>
+                <p>
+                    Programming, AI, Web Development and CS.
+                </p>
+            </div>
+
+            <div class="offer-card">
+                <h3>Fiction & Novels</h3>
+                <p>
+                    Stories, novels and literature.
+                </p>
+            </div>
+
+            <div class="offer-card">
+                <h3>Self Development</h3>
+                <p>
+                    Motivation, productivity and personal growth.
+                </p>
+            </div>
+
+            <div class="offer-card">
+                <h3>Science</h3>
+                <p>
+                    Physics, Chemistry, Biology and more.
+                </p>
+            </div>
+
+            <div class="offer-card">
+                <h3>Children's Books</h3>
+                <p>
+                    Stories, learning and activity books.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OUR MISSION -->
+
+    <div class="section">
+
+        <div class="mission">
+
+            <h2 class="section-title">OUR MISSION</h2>
+
+            <p class="mission-quote">
+                "To connect every reader with the right book."
+            </p>
+
+            <p>
+                We want to encourage students and readers
+                to explore new ideas, learn continuously
+                and develop a lifelong love for reading.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <div class="section">
+
+        <h2 class="section-title">WHY CHOOSE AHM!?</h2>
+
+        <div class="why-container">
+
+            <div class="why-card">
+                <h3>BOOKS</h3>
+                <b>Wide Collection</b>
+                <p>Books for every reader.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>LEARN</h3>
+                <b>Student Friendly</b>
+                <p>Educational books at affordable prices.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>READ</h3>
+                <b>Made for Readers</b>
+                <p>A place created with readers in mind.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUOTE -->
+
+    <div class="main-quote">
+
+        <h2>
+            "A BOOK CAN CHANGE YOUR JOURNEY."
+        </h2>
+
+        <p>
+            Pick a book. Open a page.
+            Start your next adventure.
+        </p>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div class="section">
+
+        <h2 class="section-title">COME VISIT US</h2>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Address:</strong>
+                Ahmedabad, Gujarat, India
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                info@ahmbookstore.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <h2>AHM! BOOK STORE</h2>
+
+        <p>
+            Where Every Book Opens a New World
+        </p>
+
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="books.html">Books</a> |
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+
+        <p>
+            © 2026 AHM! Book Store | 1st Semester B.Sc. CS Project
+        </p>
+
+    </div>
+
+</body>
+
+</html>
